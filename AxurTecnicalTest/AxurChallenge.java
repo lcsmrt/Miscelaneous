@@ -7,12 +7,8 @@ import java.util.stream.Collectors;
 public class AxurChallenge {
 
 	public static void main(String[] args) throws IOException {
-
-	}
-	
-	public static void verificaHTML(String urlString) throws IOException {
-		URL url = new URL(urlString);
-        BufferedReader leitorDeHTML = new BufferedReader(new InputStreamReader(url.openStream()));
+		URL url = new URL(args[0]);
+		BufferedReader leitorDeHTML = new BufferedReader(new InputStreamReader(url.openStream()));
         String conteudoHTML = leitorDeHTML.lines().collect(Collectors.joining(System.lineSeparator())).toLowerCase();
         
         String[] palavrasChave = {"black friday", "promoção", "senha"};
