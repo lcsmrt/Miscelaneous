@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 public class AxurChallenge {
 
 	public static void main(String[] args) throws IOException {
+		
 		URL url = new URL(args[0]);
 		BufferedReader leitorDeHTML = new BufferedReader(new InputStreamReader(url.openStream()));
         String conteudoHTML = leitorDeHTML.lines().collect(Collectors.joining(System.lineSeparator())).toLowerCase();
